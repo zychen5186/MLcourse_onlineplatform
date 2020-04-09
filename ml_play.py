@@ -66,9 +66,9 @@ def ml_loop():
                     comm.send_instruction(scene_info.frame, PlatformAction.MOVE_LEFT)
             elif (new_ball[1] - pre_ball[1]) < 0:
                 if (scene_info.platform[0] > new_ball[0]):
-                    comm.send_instruction(scene_info.frame, PlatformAction.MOVE_RIGHT)
-                if (scene_info.platform[0] < new_ball[0]):
                     comm.send_instruction(scene_info.frame, PlatformAction.MOVE_LEFT)
+                if (scene_info.platform[0] < new_ball[0]):
+                    comm.send_instruction(scene_info.frame, PlatformAction.MOVE_RIGHT)
             else:
                 comm.send_instruction(scene_info.frame, PlatformAction.NONE)    
             
